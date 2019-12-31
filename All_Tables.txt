@@ -1,0 +1,19 @@
+CREATE TABLE Assessment_Master (
+assessment_id int,
+candidate_id int,
+job_description_id int,
+aptitude_score int(5),
+group_discussion_score int(5),
+communication_skills_score int,----------
+technicalknowledge int(5),
+atitude_score int(5),
+stress_stollerence_score int(5),
+overallrating_score int(5),
+status varchar2(10),
+created_on TIMESTAMP,
+updated_on TIMESTAMP,
+PRIMARY KEY (assessment_id),
+FOREIGN KEY (candidate_id) REFERENCES candidate_master(candidate_id),
+FOREIGN KEY (job_description_id) REFERENCES candidate_master(job_description_id),
+)
+
